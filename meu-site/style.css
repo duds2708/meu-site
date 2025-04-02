@@ -1,0 +1,189 @@
+body {
+    background-image: url("imagens/fundo.jpg"); /* Define a imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir toda a tela */
+    background-position: center 10%; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    height: 100vh; /* Garante que o fundo ocupe toda a tela */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white; /* Deixa o texto branco para melhor contraste */
+    font-family: 'Quicksand Dash', sans-serif;
+    text-align: center;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand Dash', sans-serif;
+}
+
+/* Fundo e alinhamento */
+body {
+    background-color: #b6d2ff;
+    text-align: center;
+    padding-top: 80px;
+}
+
+/* Para a logo */
+.logo {
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Espaçamento abaixo da logo */
+}
+
+.logo .dot {
+    width: 10px;
+    height: 10px;
+    background-color: #be8782;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+/* Menu de navegação */
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;  /* Itens em uma coluna */
+    padding: 40px 60px;
+    margin: 0;
+    width: 100%;  /* Garante que os itens do menu ocupem toda a largura */
+    align-items: flex-end;  /* Alinha os itens à direita */
+}
+
+nav ul li {
+    margin-bottom: 20px;  /* Espaçamento entre os itens */
+    width: 100%;  /* Garante que os itens ocupem toda a largura */
+    display: flex;
+    justify-content: center; /* Centraliza os itens dentro de cada <li> */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    transition: 0.3s;
+    display: block;
+    width: 100%;
+    text-align: center;  /* Garante o alinhamento centralizado */
+}
+
+nav ul li a:hover {
+    color: #be8782;
+}
+
+/* SEÇÃO PRINCIPAL */
+main {
+    margin-top: 60px;
+    padding: 40px;
+}
+
+/* CONTÊINER DA FOTO E DO NOME */
+.profile {
+    display: flex;
+    flex-direction: column;  /* Alinha o conteúdo em coluna (imagem e texto) */
+    justify-content: center;  /* Centraliza o conteúdo verticalmente */
+    align-items: center;  /* Centraliza o conteúdo horizontalmente */
+    text-align: center;  /* Garante que o texto fique centralizado */
+}
+
+/* FOTO DE PERFIL */
+.profile img {
+    width: 650px;  /* Tamanho da imagem */
+    height: 650px;  /* Tamanho da imagem */
+    border-radius: 50%;  /* Forma circular */
+    object-fit: cover;  /* A imagem cobre a área sem distorção */
+    transition: all 0.3s ease-in-out;  /* Transição suave */
+}
+
+/* NOME */
+.profile h1 {
+    font-size: 72px;
+    margin-top: 20px;  /* Distância entre a imagem e o nome */
+    color: #ffffff;  /* Cor do texto, caso você precise */
+}
+
+/* DESCRIÇÃO */
+.profile p {
+    color: #ffffff;
+    margin-top: 15px;
+}
+
+/* BOTÕES */
+.buttons {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px; /* Espaço entre os botões */
+}
+
+.btn {
+    display: flex;  /* Mantém o texto bem alinhado */
+    align-items: center;  /* Centraliza o texto verticalmente */
+    justify-content: center; /* Centraliza o texto horizontalmente */
+    padding: 30px 90px;  /* Ajusta a largura */
+    font-size: 72px; /* Texto maior */
+    font-weight: bold;
+    border-radius: 100px; /* Ajuste de arredondamento */
+    min-width: 400px; /* Largura maior */
+    height: 100px; /* Altura menor */
+    text-decoration: none;
+    color: white;
+    transition: 0.3s ease-in-out;
+    text-align: center;
+}
+
+/* Cores dos botões */
+.btn.resume { background-color: #e3b3b0; } /* Rosa pastel */
+.btn.research { background-color: #96d2cb; } /* Verde-água pastel */
+.btn.outreach { background-color: #e3b3b0; } /* Vermelho pastel */
+.btn.personal { background-color: #96d2cb; } /* Azul-claro pastel */
+
+.btn:hover {
+    opacity: 0.8;
+    transform: scale(1.2); /* Efeito maior ao passar o mouse */
+}
+
+/* Adicionando a fonte customizada */
+@font-face {
+    font-family: 'Quicksand Dash';  /* Nome da fonte */
+    src: url('../meu-site/assets/QuicksandDash.ttf') format('truetype');  /* Caminho para o arquivo .ttf */
+    font-weight: normal;
+    font-style: normal;
+    font-size: 150px;
+}
+
+/* Aplicando a fonte a todos os textos */
+body, h1, p, a, .btn {
+    font-family: 'Quicksand Dash', sans-serif;
+}
+
+/* Ajustando os botões */
+.buttons {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 24px 48px;  /* Ajustando a largura do botão */
+    font-size: 38px;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    background-color: #67c8b5;  /* Cor de fundo */
+    border-radius: 50px;  /* Aumentei para um valor mais arredondado */
+    transition: background 0.3s ease-in-out;
+    text-align: center;  /* Centraliza o texto */
+}
+
+/* Adicionando o efeito de hover para o botão */
+.btn:hover {
+    background-color: #5ab5a3;  /* Cor ao passar o mouse */
+}
+
